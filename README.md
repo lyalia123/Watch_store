@@ -163,20 +163,7 @@ module.exports = mongoose.model('Order', orderSchema, 'orders');
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/online-watch-store.git
-cd online-watch-store
+git clone git@github.com:lyalia123/Watch_store.git
+cd watch_store
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Set up your MongoDB connection in `.env`:
-```env
-MONGO_URI=mongodb://localhost:27017/watchstore
-```
-
-4. Start the server:
-```bash
-npm start
