@@ -43,42 +43,15 @@ erDiagram
 
 ## Use-Case Diagram
 ```mermaid
-graph TD;
-    A[User] -->|Browse watches| B[Watch Catalog];
-    A -->|Add to Cart| C[Shopping Cart];
-    A -->|Place Order| D[Order Processing];
-    D -->|Payment| E[Payment Gateway];
-    E -->|Confirm Order| F[Order Confirmation];
-    A -->|Track Order| G[Order Tracking];
-    A -->|Manage Profile| H[User Account];
-    Admin[Admin] -->|Manage Watches| B;
-    Admin -->|Manage Orders| D;
-```
-
-## Sequence Diagram (Placing an Order)
-```mermaid
-sequenceDiagram
-    participant User
-    participant Website
-    participant Database
-    participant PaymentGateway
+usecaseDiagram
+    actor "Admin" as Admin
+    actor "User" as User
     
-    User->>Website: Browse Watches
-    Website-->>Database: Fetch Watch List
-    Database-->>Website: Return Watch List
-    Website->>User: Display Watches
+    Admin --> (Manage Watches: Create, Read, Update, Delete)
+    User --> (Place Order)
     
-    User->>Website: Add Watch to Cart
-    Website-->>Database: Update Cart
-    
-    User->>Website: Proceed to Checkout
-    Website->>PaymentGateway: Process Payment
-    PaymentGateway-->>Website: Payment Confirmed
-    Website-->>Database: Create Order
-    Database-->>Website: Order Saved
-    Website->>User: Order Confirmation
-```
-
+    (Manage Watches: Create, Read, Update, Delete) --> (CRUD Operations on Watches)
+    (Place Order) --> (Create Order)
 ## Database Schema
 
 ### User Collection
