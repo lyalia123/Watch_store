@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <h1>My Orders</h1>
+        <a href="/watches/home" class="btn btn-secondary mb-3">Back to Home</a>
+
+        <% if (orders.length === 0) { %>
+            <p>No orders found.</p>
+        <% } else { %>
+            <ul class="list-group">
+                <% orders.forEach(order => { %>
+                    <li class="list-group-item">
+                        <strong>Watch:</strong>
+                        <% if (order.watch_id) { %>
+                            <%= order.watch_id.brand || 'Unknown' %> - <%= order.watch_id.model || 'Unknown' %>
+                        <% } else { %>
+                            <span class="text-danger">Deleted Watch</span>
+                        <% } %>
+                        <br>
+                        <strong>Quantity:</strong> <%= order.quantity %> <br>
+                        <strong>Total Price:</strong> $<%= order.total_price.toFixed(2) %> <br>
+                        <strong>Order Date:</strong> <%= order.order_date ? order.order_date.toLocaleString() : 'Unknown Date' %>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>
+

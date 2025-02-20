@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Watches Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Welcome, <%= user.name %>!</h1>
+        <div>
+            <% if (user.role === 'user') { %>
+                <a href="/orders" class="btn btn-info">My Orders</a>
+            <% } %>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+    <% if (successMessage) { %>
+        <div class="alert alert-success"><%= successMessage %></div>
+    <% } %>
+    <% if (errorMessage) { %>
+        <div class="alert alert-danger"><%= errorMessage %></div>
+    <% } %>
+
+    <h3>Available Watches:</h3>
+    <div class="row">
+        <% watches.forEach(watch => { %>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= watch.brand %> - <%= watch.model %></h5>
+                        <p class="card-text">
+                            <strong>Reference:</strong> <%= watch.reference %> <br>
+                            <strong>Price:</strong> $<%= watch.price %> <br>
+                            <strong>Complication:</strong> <%= watch["complication"] %> <br>
+                            <strong>Case Material:</strong> <%= watch["case_material"] %> <br>
+                            <strong>Bracelet Material:</strong> <%= watch["bracelet_material"] %> <br>
+                            <strong>Dial:</strong> <%= watch.dial %> <br>
+                            <strong>Hour Markings:</strong> <%= watch["hour_markings"] %> <br>
+                            <strong>Lunette Material:</strong> <%= watch["lunette_material"] %>
+                        </p>
+
+                        <% if (user.role === 'user' || user.role === 'admin') { %>
+                            <form action="/orders/add" method="POST" class="d-flex gap-2">
+                                <input type="hidden" name="watch_id" value="<%= watch._id %>">
+                                <input type="number" name="quantity" value="1" min="1" class="form-control" style="width: 80px;" required>
+                                <button type="submit" class="btn btn-success btn-sm">Order</button>
+                            </form>
+                        <% } %>
+
+                        <% if (user.role === 'admin') { %>
+                            <form action="/watches/delete/<%= watch._id %>" method="POST" class="mt-2">
+                                <button class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+
+                            <button type="button" class="btn btn-warning btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#editWatchModal<%= watch._id %>">Edit</button>
+
+                            <div class="modal fade" id="editWatchModal<%= watch._id %>" tabindex="-1" aria-labelledby="editWatchModalLabel<%= watch._id %>" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Update Watch - <%= watch.brand %> <%= watch.model %></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/watches/update/<%= watch._id %>" method="POST">
+                                                <div class="mb-2"><input type="text" class="form-control" name="brand" value="<%= watch.brand %>" required></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="model" value="<%= watch.model %>" required></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="reference" value="<%= watch.reference %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="complication" value="<%= watch["complication"] %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="case_material" value="<%= watch["case_material"] %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="bracelet_material" value="<%= watch["bracelet_material"] %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="dial" value="<%= watch.dial %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="hour_markings" value="<%= watch["hour_markings"] %>"></div>
+                                                <div class="mb-2"><input type="text" class="form-control" name="lunette_material" value="<%= watch["lunette_material"] %>"></div>
+                                                <div class="mb-2"><input type="number" class="form-control" name="price" value="<%= watch.price %>" required></div>
+                                                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <% if (currentPage > 1) { %>
+            <a href="/watches/home?page=<%= currentPage - 1 %>" class="btn btn-outline-primary me-2">Previous</a>
+        <% } %>
+
+        <span class="align-self-center">Page <%= currentPage %> of <%= totalPages %></span>
+
+        <% if (currentPage < totalPages) { %>
+            <a href="/watches/home?page=<%= currentPage + 1 %>" class="btn btn-outline-primary ms-2">Next</a>
+        <% } %>
+    </div>
+
+    <% if (user.role === 'admin') { %>
+        <h3 class="mt-5">Add New Watch:</h3>
+        <form action="/watches/add" method="POST" class="bg-white p-4 rounded shadow-sm">
+            <div class="row g-3">
+                <div class="col-md-6"><input type="text" class="form-control" name="Brand" placeholder="Brand" required></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Model" placeholder="Model" required></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Reference" placeholder="Reference"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Complication" placeholder="Complication"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Case_material" placeholder="Case Material"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Bracelet_material" placeholder="Bracelet Material"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Dial" placeholder="Dial"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Hour_Markings" placeholder="Hour Markings"></div>
+                <div class="col-md-6"><input type="text" class="form-control" name="Lunette_Material" placeholder="Lunette Material"></div>
+                <div class="col-md-6"><input type="number" class="form-control" name="Price" placeholder="Price" required></div>
+                <div class="col-12"><button type="submit" class="btn btn-primary w-100">Add Watch</button></div>
+            </div>
+        </form>
+    <% } %>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
