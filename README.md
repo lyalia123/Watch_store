@@ -3,6 +3,38 @@
 ## Project Overview
 This project is an online watch store built with MongoDB, Express.js, and Node.js. It provides users with the ability to browse, purchase, and manage orders for various luxury and casual watches.
 
+## Structure of the project
+
+```
+WATCH_STORE/
+│── config/                  # Конфигурационные файлы
+│── controllers/             # Контроллеры для обработки логики
+│   ├── authController.js    # Контроллер аутентификации
+│   ├── orderController.js   # Контроллер заказов
+│   ├── watchController.js   # Контроллер часов
+│── models/                  # Модели базы данных (MongoDB)
+│   ├── Order.js             # Модель заказов
+│   ├── User.js              # Модель пользователей
+│   ├── Watch.js             # Модель часов
+│── routes/                  # Маршруты API
+│   ├── authRoutes.js        # Маршруты аутентификации
+│   ├── orderRoutes.js       # Маршруты заказов
+│   ├── watchRoutes.js       # Маршруты часов
+│── views/                   # Шаблоны страниц (EJS)
+│   ├── home.ejs             # Главная страница
+│   ├── login.ejs            # Страница входа
+│   ├── orders.ejs           # Страница заказов
+│   ├── register.ejs         # Страница регистрации
+│── node_modules/            # Зависимости npm
+│── create_json.py           # Скрипт для создания JSON
+│── normalize_json.py        # Скрипт для нормализации JSON
+│── normalized_watches_data.json # Нормализованные данные часов
+│── package.json             # Файл конфигурации npm
+│── package-lock.json        # Файл зависимостей npm
+│── server.js                # Главный серверный файл
+```
+
+
 ## ERD (Entity-Relationship Diagram)
 ```mermaid
 erDiagram
