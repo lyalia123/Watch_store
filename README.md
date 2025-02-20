@@ -110,6 +110,71 @@ sequenceDiagram
     Database-->>Website: Order Saved
     Website->>User: Order Confirmation
 ```
+🎯 Aim and Goals
+
+Develop a backend application connected to a MongoDB database.
+
+Implement CRUD operations and ensure query optimization.
+
+Secure the application with authentication and authorization.
+
+Deploy the application for real-world testing.
+
+📌 Relevance
+
+This project addresses real-world data management issues by leveraging NoSQL databases, providing scalability and performance improvements over traditional relational databases.
+
+🔍 Research
+
+Before development, a study was conducted on similar applications, analyzing their database structures, query optimizations, and security practices.
+
+🏗 System Architecture
+
+Use-Case Diagrams
+
+Sequence Diagrams
+
+
+🛢 Database Design
+
+Collections & Relationships: Minimum three collections with embedded documents.
+
+Indexing & Optimization: Query indexing for performance improvements.
+
+🚀 Application Features
+
+CRUD Operations: Create, Read, Update, Delete functionality.
+
+Query Optimization: Use of indexes for fast retrieval.
+
+Security Implementation: Authentication & Authorization.
+
+🛠 Technical Implementation
+
+1️⃣ Backend Development
+
+Built using Node.js and Express.js.
+
+Connected to MongoDB Atlas for cloud storage.
+
+2️⃣ Database Design
+
+At least three collections with proper indexing and relationships.
+
+3️⃣ CRUD Operations
+
+RESTful API endpoints for Create, Read, Update, and Delete.
+
+4️⃣ Data Collection
+
+Data sourced from relevant external APIs or datasets.
+
+5️⃣ Security
+
+User Authentication using JWT.
+
+Authorization rules for access control.
+
 
 ## Database Schema
 
