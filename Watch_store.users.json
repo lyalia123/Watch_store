@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67b7116936d3d689969cffe6"
+  },
+  "name": "Dariya",
+  "email": "dariya@a",
+  "password": "dariya@a",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b715edc6571df76b4029f1"
+  },
+  "name": "Damir",
+  "email": "damir@d",
+  "password": "damir@d",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b7388ccd91adc439f7b686"
+  },
+  "name": "Leila",
+  "email": "leila@a",
+  "password": "leila@a",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b74b125bda09559319f962"
+  },
+  "name": "inkar",
+  "email": "inkar@u",
+  "password": "inkar@u",
+  "role": "user",
+  "__v": 0
+}]

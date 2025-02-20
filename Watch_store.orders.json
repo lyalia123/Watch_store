@@ -1,0 +1,289 @@
+[{
+  "_id": {
+    "$oid": "67b722b4288d52e698ad3617"
+  },
+  "user_id": {
+    "$oid": "67b715edc6571df76b4029f1"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbce"
+  },
+  "quantity": 1,
+  "total_price": 7900,
+  "order_date": {
+    "$date": "2025-02-20T12:40:20.291Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b726473373dbe031d98965"
+  },
+  "user_id": {
+    "$oid": "67b715edc6571df76b4029f1"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbcf"
+  },
+  "quantity": 1,
+  "total_price": 98000,
+  "order_date": {
+    "$date": "2025-02-20T12:55:35.775Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b726493373dbe031d9896a"
+  },
+  "user_id": {
+    "$oid": "67b715edc6571df76b4029f1"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbce"
+  },
+  "quantity": 1,
+  "total_price": 7900,
+  "order_date": {
+    "$date": "2025-02-20T12:55:37.320Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b73bc603fdbb50bb13985e"
+  },
+  "user_id": {
+    "$oid": "67b73bc603fdbb50bb13985d"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd1"
+  },
+  "quantity": 1,
+  "total_price": 1200000,
+  "order_date": {
+    "$date": "2025-02-20T14:27:18.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b73cd07c81777a9a8a769d"
+  },
+  "user_id": {
+    "$oid": "67b73cd07c81777a9a8a769c"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd1"
+  },
+  "quantity": 1,
+  "total_price": 1200000,
+  "order_date": {
+    "$date": "2025-02-20T14:31:44.950Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b73cd27c81777a9a8a76a3"
+  },
+  "user_id": {
+    "$oid": "67b73cd27c81777a9a8a76a2"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd2"
+  },
+  "quantity": 1,
+  "total_price": 22490,
+  "order_date": {
+    "$date": "2025-02-20T14:31:46.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b740ad6be07bf84ed1e137"
+  },
+  "user_id": {
+    "$oid": "67b740ad6be07bf84ed1e136"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd2"
+  },
+  "quantity": 1,
+  "total_price": 10000,
+  "order_date": {
+    "$date": "2025-02-20T14:48:13.843Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b740af6be07bf84ed1e13d"
+  },
+  "user_id": {
+    "$oid": "67b740af6be07bf84ed1e13c"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbce"
+  },
+  "quantity": 1,
+  "total_price": 7900,
+  "order_date": {
+    "$date": "2025-02-20T14:48:15.330Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b742565dab56d1a9ddf10f"
+  },
+  "user_id": {
+    "$oid": "67b742565dab56d1a9ddf10e"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd2"
+  },
+  "quantity": 1,
+  "total_price": 10000,
+  "order_date": {
+    "$date": "2025-02-20T14:55:18.532Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b742575dab56d1a9ddf115"
+  },
+  "user_id": {
+    "$oid": "67b742575dab56d1a9ddf114"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd3"
+  },
+  "quantity": 1,
+  "total_price": 6999,
+  "order_date": {
+    "$date": "2025-02-20T14:55:19.932Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b744245dab56d1a9ddf11f"
+  },
+  "user_id": {
+    "$oid": "67b744245dab56d1a9ddf11e"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbce"
+  },
+  "quantity": 1,
+  "total_price": 7900,
+  "order_date": {
+    "$date": "2025-02-20T15:03:00.419Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b74589a209a3e75deadbc5"
+  },
+  "user_id": {
+    "$oid": "67b74589a209a3e75deadbc4"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd3"
+  },
+  "quantity": 1,
+  "total_price": 6999,
+  "order_date": {
+    "$date": "2025-02-20T15:08:57.051Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b7489c5bda09559319f942"
+  },
+  "user_id": {
+    "$oid": "67b715edc6571df76b4029f1"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd2"
+  },
+  "quantity": 1,
+  "total_price": 10000,
+  "order_date": {
+    "$date": "2025-02-20T15:22:04.159Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b748c05bda09559319f957"
+  },
+  "user_id": {
+    "$oid": "67b7116936d3d689969cffe6"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd4"
+  },
+  "quantity": 1,
+  "total_price": 12990,
+  "order_date": {
+    "$date": "2025-02-20T15:22:40.533Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b74b1a5bda09559319f968"
+  },
+  "user_id": {
+    "$oid": "67b74b125bda09559319f962"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbd4"
+  },
+  "quantity": 1,
+  "total_price": 12990,
+  "order_date": {
+    "$date": "2025-02-20T15:32:42.884Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b74b1c5bda09559319f96d"
+  },
+  "user_id": {
+    "$oid": "67b74b125bda09559319f962"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbce"
+  },
+  "quantity": 1,
+  "total_price": 7900,
+  "order_date": {
+    "$date": "2025-02-20T15:32:44.246Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b74b1f5bda09559319f972"
+  },
+  "user_id": {
+    "$oid": "67b74b125bda09559319f962"
+  },
+  "watch_id": {
+    "$oid": "67b720e9e2cebd67e027bbdb"
+  },
+  "quantity": 3,
+  "total_price": 59700,
+  "order_date": {
+    "$date": "2025-02-20T15:32:47.199Z"
+  },
+  "__v": 0
+}]
