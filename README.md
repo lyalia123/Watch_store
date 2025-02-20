@@ -5,16 +5,41 @@ This project is an online watch store built with MongoDB, Express.js, and Node.j
 
 ## ERD (Entity-Relationship Diagram)
 ```mermaid
-graph TD;
-  User -->|Places| Order;
-  Order -->|Contains| Watch;
+erDiagram
+    USER {
+        ObjectId _id
+        string name
+        string email
+        string password
+        string role
+    }
+    
+    WATCH {
+        ObjectId _id
+        string brand
+        string model
+        string reference
+        string complication
+        string case_material
+        string bracelet_material
+        string dial
+        string hour_markings
+        string lunette_material
+        number price
+    }
+    
+    ORDER {
+        ObjectId _id
+        ObjectId user_id
+        ObjectId watch_id
+        number quantity
+        number total_price
+        date order_date
+    }
+    
+    USER ||--o{ ORDER : places
+    WATCH ||--o{ ORDER : includes
 
-  User[User]
-  Order[Order]
-  Watch[Watch]
-
-  User -->|user_id| Order;
-  Order -->|watch_id| Watch;
 ```
 
 ## Database Schema
