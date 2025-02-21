@@ -3,6 +3,9 @@
 ## Project Overview
 This project is an online watch store built with MongoDB, Express.js, and Node.js. It provides users with the ability to browse, purchase, and manage orders for various luxury and casual watches.
 
+## Deployed link
+https://watch-store-rcf4.onrender.com
+
 ## Structure of the project
 
 ```
