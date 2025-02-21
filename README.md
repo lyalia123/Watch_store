@@ -135,17 +135,9 @@ Use-Case Diagrams
 Sequence Diagrams
 
 
-🛢 Database Design
-
-Collections & Relationships: Minimum three collections with embedded documents.
-
-Indexing & Optimization: Query indexing for performance improvements.
-
 🚀 Application Features
 
 CRUD Operations: Create, Read, Update, Delete functionality.
-
-Query Optimization: Use of indexes for fast retrieval.
 
 Security Implementation: Authentication & Authorization.
 
@@ -153,23 +145,19 @@ Security Implementation: Authentication & Authorization.
 
 1️⃣ Backend Development
 
-Built using Node.js and Express.js.
+Built using Node.js.
 
 Connected to MongoDB Atlas for cloud storage.
 
-2️⃣ Database Design
-
-At least three collections with proper indexing and relationships.
-
-3️⃣ CRUD Operations
+2️⃣  CRUD Operations
 
 RESTful API endpoints for Create, Read, Update, and Delete.
 
-4️⃣ Data Collection
+3️⃣ Data Collection
 
 Data sourced from relevant external APIs or datasets.
 
-5️⃣ Security
+4️⃣ Security
 
 User Authentication using JWT.
 
