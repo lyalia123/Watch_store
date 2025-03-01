@@ -76,43 +76,8 @@ erDiagram
     WATCH ||--o{ ORDER : includes
 ```
 
-## Use-Case Diagram
-```mermaid
-graph TD;
-    A[User] -->|Browse watches| B[Watch Catalog];
-    A -->|Add to Cart| C[Shopping Cart];
-    A -->|Place Order| D[Order Processing];
-    D -->|Payment| E[Payment Gateway];
-    E -->|Confirm Order| F[Order Confirmation];
-    A -->|Track Order| G[Order Tracking];
-    A -->|Manage Profile| H[User Account];
-    Admin[Admin] -->|Manage Watches| B;
-    Admin -->|Manage Orders| D;
-```
 
-## Sequence Diagram (Placing an Order)
-```mermaid
-sequenceDiagram
-    participant User
-    participant Website
-    participant Database
-    participant PaymentGateway
-    
-    User->>Website: Browse Watches
-    Website-->>Database: Fetch Watch List
-    Database-->>Website: Return Watch List
-    Website->>User: Display Watches
-    
-    User->>Website: Add Watch to Cart
-    Website-->>Database: Update Cart
-    
-    User->>Website: Proceed to Checkout
-    Website->>PaymentGateway: Process Payment
-    PaymentGateway-->>Website: Payment Confirmed
-    Website-->>Database: Create Order
-    Database-->>Website: Order Saved
-    Website->>User: Order Confirmation
-```
+
 🎯 Aim and Goals
 
 Develop a backend application connected to a MongoDB database.
@@ -130,12 +95,6 @@ This project addresses real-world data management issues by leveraging NoSQL dat
 🔍 Research
 
 Before development, a study was conducted on similar applications, analyzing their database structures, query optimizations, and security practices.
-
-🏗 System Architecture
-
-Use-Case Diagrams
-
-Sequence Diagrams
 
 
 🚀 Application Features
